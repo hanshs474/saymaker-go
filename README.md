@@ -17,6 +17,19 @@ go get github.com/hanshs474/saymaker-go
 
 Standard library only. Set `SAYMAKER_API_KEY` or pass `Options.APIKey`.
 
+## Command line
+
+```bash
+go install github.com/hanshs474/saymaker-go/cmd/saymaker@latest
+
+saymaker "a paper boat at sunrise, soft fog"
+saymaker -video -duration 6 "a fox trotting through fresh snow at dawn"
+saymaker -model gpt-image-2-5-flare -aspect 16:9 "isometric diorama of a ramen shop at night"
+saymaker -image https://example.com/portrait.jpg "change the jacket to dark green, keep the face"
+```
+
+It prints the URL of the finished file. Prebuilt binaries for Linux, macOS and Windows are on the [releases page](https://github.com/hanshs474/saymaker-go/releases).
+
 ## API key
 
 Sign up on [saymaker.ai](https://saymaker.ai/?utm_source=pkg.go.dev&utm_medium=package) (new accounts get sign-up credits), create a key at [saymaker.ai/settings/apikeys](https://saymaker.ai/settings/apikeys?utm_source=pkg.go.dev&utm_medium=package), then pass it or export it:
